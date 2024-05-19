@@ -8,5 +8,20 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header></header>
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl">
+                <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+            </div>
+            
+            <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'container' => true,
+                    'menu_class' => 'flex space-x-4',
+                    'walker' => new WP_Bootstrap_Navwalker(),
+                ));
+            ?>
+        </div>
+    </nav>
     
