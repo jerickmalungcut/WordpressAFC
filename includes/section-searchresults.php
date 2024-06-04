@@ -16,4 +16,6 @@
 
 
 
-<?php endwhile; else : endif; ?>
+<?php endwhile; ?> <?php else : ?> 
+    No search results found.    
+<?php endif; ?>

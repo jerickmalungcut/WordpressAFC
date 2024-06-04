@@ -8,19 +8,10 @@
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h1>
 
-                <?php echo get_the_date('d/m/Y h:i:s'); ?>
-
                 <div class="text-gray-700">
                     <?php the_content(); ?>
                 </div>
 
-                <!-- the_author() this will output the admin but if you want to post the name you can do below -->
-                Posted by
-                <?php
-                    $fname = get_the_author_meta('first_name');
-                    $lname = get_the_author_meta('last_name');
-                    echo $fname . ' ' . $lname;
-                ?>
 
                 <!-- This will show the tags -->
                 <p>Tags:
